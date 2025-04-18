@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useProjectStore } from "../stores/useProjectStore";
 import { projectApi } from "../api/projects";
+import { Project } from "@/types";
 
 export const ProjectList: React.FC = () => {
   const {
@@ -50,7 +51,7 @@ export const ProjectList: React.FC = () => {
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">Your Projects</h2>
       <div className="space-y-2">
-        {projects.map((project) => (
+        {projects.map((project: Project) => (
           <div
             key={project.id}
             className={`p-3 rounded-lg cursor-pointer ${

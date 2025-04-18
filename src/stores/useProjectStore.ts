@@ -15,7 +15,7 @@ export const useProjectStore = create<ProjectState>((set) => ({
     projects: [],
     activeProject: null,
     isLoading: false,
-    setProjects: (projects) => set({ projects }),
-    setActiveProject: (project) => set({ activeProject: project }),
-    setIsLoading: (value) => set({ isLoading: value }),
+    setProjects: (projects: Project[]) => set({ projects }),
+    setActiveProject: (project: Project | null) => set({ activeProject: project }),
+    setIsLoading: (value: boolean) => set({ isLoading: value }),
 }));

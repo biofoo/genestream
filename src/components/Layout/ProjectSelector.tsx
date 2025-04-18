@@ -1,3 +1,4 @@
+// src/components/Layout/ProjectSelector.tsx
 import React from "react";
 import { Check, FolderIcon } from "lucide-react";
 import { Project } from "@/types";
@@ -46,7 +47,7 @@ export const ProjectSelector: React.FC<ProjectSelectorProps> = ({
   return (
     <div className="px-2 py-2 border-b border-gray-200 dark:border-gray-700">
       <div className="space-y-1">
-        {displayedProjects.map((project) => (
+        {displayedProjects.map((project: Project) => (
           <button
             key={project.id}
             onClick={() => handleProjectSelect(project)}
